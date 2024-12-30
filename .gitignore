@@ -1,5 +1,5 @@
 # 编译输出文件
-build/
+/build/
 bin/
 obj/
 *.o
@@ -19,7 +19,7 @@ Thumbs.db  # Windows
 
 # IDE 配置文件
 .vscode/
-.idea/
+/.idea/
 *.suo
 *.user
 *.userosscache

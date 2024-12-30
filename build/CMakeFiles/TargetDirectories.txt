@@ -1,6 +1,0 @@
-/Users/cjh/Desktop/file/cpp/My_thread/build/CMakeFiles/my_project.dir
-/Users/cjh/Desktop/file/cpp/My_thread/build/CMakeFiles/edit_cache.dir
-/Users/cjh/Desktop/file/cpp/My_thread/build/CMakeFiles/rebuild_cache.dir
-/Users/cjh/Desktop/file/cpp/My_thread/build/src/CMakeFiles/my_thread_library.dir
-/Users/cjh/Desktop/file/cpp/My_thread/build/src/CMakeFiles/edit_cache.dir
-/Users/cjh/Desktop/file/cpp/My_thread/build/src/CMakeFiles/rebuild_cache.dir

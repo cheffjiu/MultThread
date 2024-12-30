@@ -1,1 +1,0 @@
-/usr/bin/clang++ -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -dynamiclib -Wl,-headerpad_max_install_names -o ../lib/libmy_thread_library.dylib -install_name @rpath/libmy_thread_library.dylib CMakeFiles/my_thread_library.dir/Thread.cpp.o
