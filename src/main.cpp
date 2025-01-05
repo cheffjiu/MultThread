@@ -1,4 +1,5 @@
-#include "Thread.h"
+
+#include "my_thread.h"
 #include <iostream>
 
 void print_message(const std::string& message, int count) {
@@ -10,10 +11,13 @@ void print_message(const std::string& message, int count) {
 int main() {
     try {
         Thread t1(print_message, "Hello from thread 1", 3);
-        std::function<void()> bound_func=[]{
+        // std::function<void()> bound_func=[]{
+        //     std::cout << "Hello from thread 2!" << std::endl;
+        // };
+        std::cout<<std::endl;
+        Thread t2([](){
             std::cout << "Hello from thread 2!" << std::endl;
-        };
-        Thread t2(bound_func);
+        });
         t1.join();
         t2.detach();
 

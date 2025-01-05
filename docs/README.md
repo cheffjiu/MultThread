@@ -65,3 +65,37 @@ UML 类图
     |   |-- Thread.cpp
     |-- main.cpp
     |-- CMakeLists.txt
+
+
+    <project_root>/
+├── CMakeLists.txt           # 顶层 CMake 配置文件
+├── build/                   # 构建目录（通常忽略，避免源代码和构建文件混合）
+├── cmake/                   # 可选：存放 CMake 模块和工具的目录
+│   ├── Find<Package>.cmake  # 自定义查找包模块（如果需要）
+│   ├── <OtherHelper>.cmake  # 其他 CMake 配置帮助文件
+├── src/                     # 源代码目录
+│   ├── CMakeLists.txt       # 项目内部子模块的 CMake 配置
+│   ├── main.cpp             # 项目的入口文件
+│   ├── <module1>/           # 子模块1
+│   │   ├── CMakeLists.txt   # 子模块1的 CMake 配置
+│   │   ├── module1.cpp      # 子模块1的实现文件
+│   │   └── module1.h        # 子模块1的头文件
+│   ├── <module2>/           # 子模块2
+│   │   ├── CMakeLists.txt   # 子模块2的 CMake 配置
+│   │   ├── module2.cpp      # 子模块2的实现文件
+│   │   └── module2.h        # 子模块2的头文件
+│   └── ...                  # 更多子模块
+├── include/                 # 公共头文件目录
+│   ├── <module1>/           # 头文件可以放在子模块下
+│   │   └── module1.h        # 公共头文件
+│   └── ...                  # 更多头文件
+├── lib/                     # 可选：静态库、共享库存放目录
+├── tests/                   # 测试目录
+│   ├── CMakeLists.txt       # 测试模块的 CMake 配置
+│   ├── test_module1.cpp     # 测试用例1
+│   └── test_module2.cpp     # 测试用例2
+├── external/                # 外部库（例如：第三方库、Git子模块等）
+│   └── <external_module>/   # 外部模块存放位置
+├── doc/                     # 项目的文档目录
+│   └── README.md            # 项目说明文件
+└── .gitignore               # Git 忽略文件列表

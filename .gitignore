@@ -19,7 +19,7 @@ Thumbs.db  # Windows
 
 # IDE 配置文件
 .vscode/
-/.idea/
+.idea/
 *.suo
 *.user
 *.userosscache

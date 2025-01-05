@@ -1,24 +1,24 @@
-cmake_minimum_required(VERSION 3.30) #cmake最低版本要求
+#项目主CMakeLists.txt
 
-project(My_Thread) #项目名称
+#定义Cmake最低版本
+cmake_minimum_required(VERSION 3.30)
 
-set(CMAKE_CXX_STANDARD 11) #c++标准
-set(CMAKE_CXX_STANDARD_REQUIRED ON) #编译器不满足c++11报错
+# 项目名称
+project(MutiThread)
 
-set(CMAKE_BUILD_TYPE "Debug") #cmake的构建模式 debug 或者 relese
+#设置C++标准
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#设置库和可执行文件的输出目录
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+#设置build类型 Debug or Release
+set(CMAKE_BUILD_TYPE Debug)
 
-#添加include和src子目录
+#添加子目录
 add_subdirectory(src)
 
-#添加可执行文件
-add_executable(my_project main.cpp)
+#添加test目录
+enable_testing()
+add_subdirectory(tests)
 
-#链接src生成的库到可执行文件
-target_link_libraries(my_project PRIVATE my_thread_library)
-
-#添加include目录到my_project
-target_include_directories(my_project PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+#查找已安装的googletest
+#find_package(GTest REQUIRED)
