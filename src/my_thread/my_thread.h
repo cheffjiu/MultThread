@@ -1,5 +1,5 @@
-#ifndef __Thread_h
-#define __Thread_h
+#ifndef MY_THREAD_H
+#define MY_THREAD_H
 #include "pub_include.h"
 
 class Thread
